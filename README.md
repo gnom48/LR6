@@ -30,4 +30,63 @@ git clone https://github.com/gnom48/LR6.git
 cd LR6
 ```
 
+### 5. Добавление файла через интерфейс GitHub
 
+Файл `file.txt` создан через кнопку **Add file → Create new file** и закоммичен.
+Изменения подтянуты локально:
+
+```bash
+git pull origin branch1
+```
+
+### 6. История операций
+Просмотр истории по всем веткам:
+
+```bash
+git log --all --graph --decorate --oneline
+```
+![Изменения](images/changes.png)
+
+### 7. Просмотр последних изменений
+```bash
+git log --stat -n 3
+```
+
+8. Слияние с master и разрешение конфликта
+```bash
+git checkout master
+git merge branch1
+```
+Конфликт разрешён вручную в VS Code, затем:
+
+```bash
+git add .
+git commit -m "Merge: порешали конфликт"
+```
+
+### 9. Удаление побочной ветки
+```bash
+git branch -d branch1
+```
+
+### 10. Несколько коммитов и откат
+Серия изменений:
+
+```bash
+git add .
+git commit -m "Дописали mergefile.txt"
+...
+git add .
+git commit -m "Наследили в file.txt"
+```
+
+Откат последнего коммита:
+
+```bash
+git reset --hard HEAD~1
+```
+
+### 11. Ветка для отчёта
+```bash
+git checkout -b report
+```
