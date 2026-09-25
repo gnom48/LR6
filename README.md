@@ -90,3 +90,34 @@ git reset --hard HEAD~1
 ```bash
 git checkout -b report
 ```
+
+...
+
+## Лог команд (без вывода)
+
+```bash
+git clone https://github.com/gnom48/LR6.git
+cd LR6
+git checkout branch1
+git status
+git pull origin branch1
+git log --all --graph --decorate --oneline
+git log --stat -n 3
+git checkout master
+git merge branch1
+git status
+git add mergefile.txt
+git status
+git commit -m "Merge: конфликт порешали"
+git branch -d branch1
+git add mergefile.txt
+git commit -m "Дописали mergefile.txt"
+git add file.txt
+git commit -m "Наследили в file.txt"
+git reset --hard HEAD~1
+git checkout -b report
+git add .
+git commit -m "Начали оформлять отчет"
+git add .
+git commit -m "Продолжили оформлять отчет"
+```
