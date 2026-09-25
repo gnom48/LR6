@@ -137,3 +137,7 @@ cdbb11d - 2026-09-25 - gnom48 : Начали оформлять отчет
 c08a654 - 2020-11-21 - Kurtyanik : Файл создан пустым
 3c6e913 - 2020-11-21 - Kurtyanik : Initial commit
 ```
+
+### Финал
+
+Сделал pull request через интерфейс GitHub, чтобы слить report в master
